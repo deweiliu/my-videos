@@ -30,7 +30,7 @@ Resources:
     Properties:
       MasterUsername: !Ref DBUsername
       MasterUserPassword: !Ref DBPassword
-      DatabaseName: the-video
+      DatabaseName: thevideo
       Engine: aurora
       EngineMode: serverless
       StorageEncrypted: true
