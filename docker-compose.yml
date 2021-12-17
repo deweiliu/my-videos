@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  the-video:
+    image: deweiliu/the-video:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: the-video-container
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '3306:3306'
+      - '443:443'
