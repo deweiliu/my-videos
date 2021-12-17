@@ -62,7 +62,7 @@ export class CdkStack extends cdk.Stack {
     const configAccessPoint1 = new AccessPoint(this, 'ConfigAccessPoint', {
       fileSystem,
       createAcl: { ownerGid: posixId, ownerUid: posixId, permissions: "755" },
-      path: '/config',
+      path: '/var/www/avideo',
       posixUser: { uid: posixId, gid: posixId },
     });
 
