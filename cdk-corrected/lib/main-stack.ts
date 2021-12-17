@@ -1,7 +1,7 @@
 /// <reference path="../node_modules/jest-haste-map/build/crawlers/node.d.ts" />
 import * as cdk from '@aws-cdk/core';
 import * as cfninc from '@aws-cdk/cloudformation-include';
-import template from '../../cdk/cdk.out/PiwigoPhotos.template.json';
+import template from '../../cdk/cdk.out/TheVideo.template.json';
 
 const fs = require("fs");
 
