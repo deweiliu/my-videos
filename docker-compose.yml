@@ -1,14 +1,18 @@
-version: '3'
-
+version: "3.3"
+# https://docs.joinpeertube.org/install-docker
 services:
-  the-video:
-    image: deweiliu/the-video:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: the-video-container
-    restart: unless-stopped
+  peertube:
+    image: chocobozzz/peertube:production-bullseye
+    env_file:
+      - .env
     ports:
-      - '80:80'
-      - '3306:3306'
-      - '443:443'
+     - "9000:9000"
+    restart: "always"
+    depends_on:
+      - redis
+  redis:
+    image: redis:6-alpine
+    volumes:
+      - ./docker-volume/redis:/data
+    restart: "always"
+
